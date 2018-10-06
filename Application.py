@@ -1,11 +1,11 @@
 from flask import Flask
-import subprocess
+import os
 
 app = Flask(__name__)
 
 @app.route('/build', methods=['GET'])
 def build():
-    subprocess.call("bash PullAndDeployMobileApi.sh")
+    os.system("bash PullAndDeployMobileApi.sh")
     return "hi"
 
 
