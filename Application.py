@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from git import Git
 import os
 
@@ -24,7 +24,7 @@ def get_list_of_branches():
     branches = []
     for branch in branches_raw:
         branches.append(branch.strip('*').strip())
-    return branches
+    return jsonify(branches)
 
 if __name__ == '__main__':
     application.run(host='0.0.0.0')
