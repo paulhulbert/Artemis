@@ -3,10 +3,10 @@
 # $1 = branch name
 cd /home/pxh8242/supply-chain-visibility
 git pull
-git checkout $1
+git checkout $2
 cd /home/pxh8242/deployments
 git rm -r *
 cp -r /home/pxh8242/supply-chain-visibility/* /home/pxh8242/deployments/
 git add *
 git commit -m "Automated deployment"
-git push $0 $1
+git push $1 $2
