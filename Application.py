@@ -5,12 +5,12 @@ application = Flask(__name__)
 
 @application.route('/mobileapi', methods=['GET'])
 def build_mobile_api():
-    os.system("bash PullAndDeployMobileApi.sh")
+    os.system("bash PullAndDeploy.sh azureMobileApi master")
     return "Mobile Api was deployed"
 
 @application.route('/dataadapter', methods=['GET'])
 def build_data_adapter():
-    os.system("bash PullAndDeployDataAdapter.sh")
+    os.system("bash PullAndDeploy.sh azureDataAdapter master")
     return "Data Adapter was deployed"
 
 
