@@ -9,4 +9,4 @@ git rm -r *
 cp -r /home/pxh8242/supply-chain-visibility/* /home/pxh8242/deployments/
 git add *
 git commit -m "Automated deployment"
-git push $1 $2
+git push $1 master

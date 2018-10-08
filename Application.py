@@ -25,7 +25,7 @@ def get_list_of_branches_api():
 def build_and_deploy(project, branch):
     g.pull()
     if branch not in get_list_of_branches():
-        return "Branch" + branch + " is not in the list of branches"
+        return "Branch " + branch + " is not in the list of branches"
     os.system("bash PullAndDeploy.sh " + project + " " + branch)
     return project + " was deployed"
 
